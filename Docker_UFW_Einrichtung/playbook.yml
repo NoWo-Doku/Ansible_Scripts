@@ -74,3 +74,4 @@
   handlers:
     - name: restart ufw
       service: name=ufw state=restarted enabled=yes
+      
