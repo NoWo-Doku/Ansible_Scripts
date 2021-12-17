@@ -71,6 +71,7 @@
     #  ufw: rule=allow src={{ hostvars[item]['ansible_default_ipv4']['address'] }} port=4789,7946 proto=udp
     #  with_items: "{{ ansible_play_hosts | default(play_hosts) }}"
     #  notify: restart ufw
+    # TEST
 
   handlers:
     - name: restart ufw
