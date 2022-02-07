@@ -1,0 +1,112 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Insert alias udo
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias udo='sudo'"
+        insertbefore: EOF
+    
+    - name: Insert alias klir
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias klir='clear'"
+        insertbefore: EOF
+    
+    - name: Insert alias c
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias c='clear'"
+        insertbefore: EOF
+    
+    - name: Insert alias ll
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias ll='ls -l'"
+        insertbefore: EOF
+    
+    - name: Insert alias la
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias ll='ls -alF'"
+        insertbefore: EOF
+    
+    - name: Insert alias l
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias l='ls -CF'"
+        insertbefore: EOF
+
+    - name: Insert alias Jupyter Notebook
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias jp='jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10'"
+        insertbefore: EOF
+
+    - name: Insert alias Nginx Proxy Manager Admin Panel
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias nginxAdmin='ssh -L 8181:172.20.0.2:81 vps'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env Default
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias Default='source ~/venv/Default/bin/activate'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env ai
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias ai='source ~/venv/ai/bin/activate'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env offSec
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias offSec='source ~/venv/offSec/bin/activate'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env ansible
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias ansible='source ~/venv/ansible/bin/activate'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env sodo_offSec
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias sudo_offSec='sudo ~/venv/offSec/bin/python3.9'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env sodo_Default
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias sudo_Default='sudo ~/venv/Default/bin/python3.9'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env sodo_ai
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias sudo_ai='sudo ~/venv/ai/bin/python3.9'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env sodo_ansible
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: "alias sudo_ansible='sudo ~/venv/ansible/bin/python3.9'"
+        insertbefore: EOF
+    
+    - name: Insert alias Virtual env sodo_
+      lineinfile:
+        path: /home/nowo/.bashrc
+        line: ""
+        insertbefore: EOF
+    
+    
+    
+    
+
+    - name: Reload bashrc
+      shell: bash
