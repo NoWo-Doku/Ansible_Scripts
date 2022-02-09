@@ -1,5 +1,5 @@
 ---
-- hosts: raspi
+- hosts: vps
   become: true
   tasks:
     - name: install ufw
@@ -21,6 +21,8 @@
         - { rule: 'allow', port: '1270', proto: 'tcp' }
         - { rule: 'allow', port: '80', proto: 'tcp' }
         - { rule: 'allow', port: '443', proto: 'tcp' }
+        - { rule: 'deny', port: '8448', proto: 'tcp' }
+        
       notify:
         - restart ufw
 
