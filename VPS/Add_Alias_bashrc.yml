@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: vps
   become: yes
   tasks:
     - name: Insert alias udo
