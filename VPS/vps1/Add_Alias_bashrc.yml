@@ -1,42 +1,42 @@
 ---
-- hosts: vps
+- hosts: vps1
   become: yes
   tasks:
     - name: Insert alias udo
       lineinfile:
-        path: /home/pi/.bashrc
+        path: /home/nowo/.bashrc
         line: "alias udo='sudo'"
         insertbefore: EOF
     
     - name: Insert alias klir
       lineinfile:
-        path: /home/pi/.bashrc
+        path: /home/nowo/.bashrc
         line: "alias klir='clear'"
         insertbefore: EOF
     
     - name: Insert alias c
       lineinfile:
-        path: /home/pi/.bashrc
+        path: /home/nowo/.bashrc
         line: "alias c='clear'"
         insertbefore: EOF
     
     - name: Insert alias ll
       lineinfile:
-        path: /home/pi/.bashrc
+        path: /home/nowo/.bashrc
         line: "alias ll='ls -l'"
         insertbefore: EOF
     
     - name: Insert alias la
       lineinfile:
-        path: /home/pi/.bashrc
+        path: /home/nowo/.bashrc
         line: "alias la='ls -A'"
         insertbefore: EOF
     
     - name: Insert alias l
       lineinfile:
-        path: /home/pi/.bashrc
+        path: /home/nowo/.bashrc
         line: "alias l='ls -CF'"
         insertbefore: EOF
 
     - name: Reload bashrc
-      shell: bash
+        shell: bash

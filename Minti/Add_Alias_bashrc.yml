@@ -98,11 +98,7 @@
         line: "alias sudo_ansible='sudo ~/venv/ansible/bin/python3.9'"
         insertbefore: EOF
     
-    - name: Insert alias Virtual env sodo_
-      lineinfile:
-        path: /home/nowo/.bashrc
-        line: ""
-        insertbefore: EOF
+    
     
     
     
